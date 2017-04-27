@@ -1,17 +1,17 @@
 package base
 
 import base.battleSet.Battle
-import base.objects.{Monster, PlayerCharacter}
+import base.objects.Actor
 
 /**
   * Created by Dave on 09-Apr-17.
   */
 object Runner extends App {
 
-  val monster = Monster("Slime", 100, 5)
-  val character = PlayerCharacter("Ronald", 100, 10)
+  val monster = Actor("Slime", 100, 5, 3)
+  val character = Actor("Ronald", 100, 10, 5)
 
-  val battle = Battle(character, monster)
+  val battle = Battle(Set(character), List(monster))
 
   battle.battle()
 
